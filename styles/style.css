@@ -68,6 +68,7 @@ ol {
   inline-size: 100%;
   block-size: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .search-form {
@@ -138,7 +139,8 @@ ol {
   cursor: pointer;
 }
 
-.search-form__checkbox:active + .search-form__pseudo-checkbox {
+.search-form__checkbox:active + .search-form__pseudo-checkbox,
+.search-form__checkbox:checked + .search-form__pseudo-checkbox {
   background-color: #fff;
   outline: 1px solid #000;
   outline-offset: -2px;
@@ -232,6 +234,7 @@ ol {
   inline-size: 194px;
   block-size: 103px;
   object-fit: cover;
+  object-position: center;
 }
 
 .button {
@@ -269,4 +272,8 @@ ol {
 
 .more-button {
   padding: 5px 144px;
+}
+
+.more-button:focus {
+  outline: none;
 }
