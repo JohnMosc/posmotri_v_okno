@@ -139,8 +139,7 @@ ol {
   cursor: pointer;
 }
 
-.search-form__checkbox:active + .search-form__pseudo-checkbox,
-.search-form__checkbox:checked + .search-form__pseudo-checkbox {
+.search-form__checkbox:active + .search-form__pseudo-checkbox {
   background-color: #fff;
   outline: 1px solid #000;
   outline-offset: -2px;
@@ -152,6 +151,15 @@ ol {
   ) {
   outline: 1px solid #fff;
   outline-offset: 1px;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::before {
+  content: "";
+  display: inline-block;
+  inline-size: 15px;
+  block-size: 15px;
+  margin: 1px 2px 2px 1px;
+  background-color: #fff;
 }
 
 .content__details {
@@ -246,34 +254,30 @@ ol {
   border: 1px solid #fff;
 }
 
+.button:focus {
+  outline: none;
+}
+
+.button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
 .search-form__submit-button {
   padding: 5px 73px;
   align-self: flex-end;
 }
 
-.search-form__submit-button:focus {
-  outline: none;
-}
-
-.search-form__submit-button:focus-visible {
-  outline: 1px solid #fff;
-  outline-offset: 2px;
-}
-
-.search-form__submit-button:hover,
-.more-button:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.search-form__submit-button:active {
-  background-color: #545050;
-}
-
 .more-button {
-  padding: 5px 144px;
-}
-
-.more-button:focus {
-  outline: none;
+  padding: 5px 141px;
+  margin: 3px;
 }
